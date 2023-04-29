@@ -474,9 +474,9 @@
         </div>
         <!-- subscribe-form -->
         <div class="subs-form" role="group">
-          <form action="" autocomplete="on">
+          <form autocomplete="on">
             <label for="email" class="subs-lab">
-              <p class="subs-par">Subscribe</p>
+              <span class="subs-par">Subscribe</span>
             </label>
             <div class="subs-box">
               <input
@@ -488,7 +488,7 @@
               />
 
               <button type="submit" class="subs-btn">
-                <p>Subscribe</p>
+                <span>Subscribe</span>
                 <svg width="24px" height="24px">
                   <use href="./images/icon.svg#icon-send"></use>
                 </svg>
@@ -501,7 +501,7 @@
     <!-- modal-window -->
     <div data-modal class="backdrop is-hidden">
       <div class="modal-window">
-        <form action="" class="modal-form">
+        <form class="modal-form">
           <div class="modal-form-wrap" role="group">
             <!-- title -->
             <p class="modal-title">
@@ -510,7 +510,7 @@
             <!-- name -->
 
             <label for="user-name" class="modal-lab"
-              ><p class="modal-par">Name</p></label
+              ><span class="modal-par">Name</span></label
             >
 
             <div class="modal-icon-wrap">
@@ -527,7 +527,7 @@
 
             <!-- phone -->
             <label for="user-phone" class="modal-lab"
-              ><p class="modal-par">Phone</p></label
+              ><span class="modal-par">Phone</span></label
             >
 
             <div class="modal-icon-wrap">
@@ -546,7 +546,7 @@
 
             <!-- E-mail -->
             <label for="user-email" class="modal-lab"
-              ><p class="modal-par">Email</p></label
+              ><span class="modal-par">Email</span></label
             >
 
             <div class="modal-icon-wrap">
@@ -565,7 +565,7 @@
 
             <!-- coments -->
             <label for="user-coments" class="modal-lab"
-              ><p class="modal-par">Comment</p></label
+              ><span class="modal-par">Comment</span></label
             >
             <textarea
               placeholder="Text input"
@@ -578,14 +578,13 @@
             <!-- checkbox -->
             <div class="wrap-accept">
               <label for="chec" class="modal-accept-lab"
-                ><p class="modal-par-acept">
+                ><span class="modal-par-acept">
                   I accept the terms and conditions of the
                   <a href="">Privacy Policy</a>
-                </p>
+                </span>
 
                 <input
                   type="checkbox"
-                  -50
                   id="chec"
                   name="accept"
                   class="modal-accept"
@@ -599,7 +598,7 @@
               </label>
             </div>
             <!-- btn-send -->
-            <button type="submit" class="send-btn"><p>Send</p></button>
+            <button type="submit" class="send-btn"><span>Send</span></button>
           </div>
         </form>
         <button data-modal-close type="button" class="btn-modal">
