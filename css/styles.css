@@ -27,6 +27,7 @@ body {
   color: var(--body-text-slate);
   background-color: var(--primary-bg);
 }
+
 /* overall dimensions of the box */
 .container {
   width: 1158px;
@@ -723,6 +724,11 @@ body {
     scale var(--time-transition) var(--cub-bezier);
 }
 .modal-window {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 72px;
+  padding-bottom: 24px;
+
   position: fixed;
   left: 50%;
   top: 50%;
@@ -774,15 +780,6 @@ body {
     scale var(--time-transition) var(--cub-bezier);
 }
 /* modal-form */
-.modal-form-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 72px;
-  padding-bottom: 24px;
-}
 .modal-title {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -794,9 +791,11 @@ body {
   color: var(--nav-blue);
   margin-bottom: 16px;
 }
-
+.modal-lab {
+  margin-bottom: 4px;
+  display: block;
+}
 .modal-par {
-  padding-bottom: 4px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -806,6 +805,7 @@ body {
   letter-spacing: 0.04em;
 }
 .modal-inp {
+  display: block;
   padding-left: 38px;
   width: 100%;
   min-height: 40px;
@@ -829,8 +829,6 @@ body {
   fill: var(--primary-brand-iris);
 }
 .modal-inp::placeholder {
-  padding-top: 8px;
-  padding-left: 16px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -846,9 +844,9 @@ body {
 }
 .modal-icon-img {
   top: 50%;
+  left: 16px;
   transform: translateY(-50%);
   position: absolute;
-  padding-left: 19px;
 }
 .blue-icon use {
   fill: var(--nav-blue);
@@ -857,22 +855,17 @@ body {
   transition-timing-function: var(--cub-bezier);
 }
 .text-ar {
-  padding-left: 0;
+  padding-left: 16px;
+  padding-top: 8px;
+  resize: none;
+  max-height: 120px;
 }
 .wrap-accept {
   margin-top: 16px;
   margin-bottom: 24px;
   display: flex;
   align-items: center;
-  justify-content: start;
-  flex-direction: row-reverse;
-}
-.modal-accept-lab {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-}
-.modal-par-acept {
+
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -881,24 +874,28 @@ body {
   color: var(--light-slate-color);
   letter-spacing: 0.04em;
 }
-.modal-par-acept a {
+.modal-accept-lab {
+  display: flex;
+  align-items: center;
+}
+
+.wrap-accept a {
   color: var(--primary-brand-iris);
 }
 .modal-accept {
   appearance: none;
 }
-.modal-accept:checked + .fakecheck {
+.modal-accept:checked + .modal-accept-lab .fakecheck {
   border: none;
   background-color: var(--pressed-state-ocean);
 }
-.modal-accept:checked + .fakecheck .fakecheck-img {
+.modal-accept:checked + .modal-accept-lab .fakecheck .fakecheck-img {
   opacity: 1;
 }
 .fakecheck {
+  position: relative;
   margin-right: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   width: 16px;
   height: 16px;
   border: 1px solid var(--nav-blue);
@@ -908,16 +905,28 @@ body {
     border var(--time-transition) var(--cub-bezier);
 }
 .fakecheck-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 0;
   transition-property: opacity;
   transition-duration: var(--time-transition);
   transition-timing-function: var(--cub-bezier);
 }
 .send-btn {
+  display: block;
   width: 169px;
   height: 56px;
   margin-left: auto;
   margin-right: auto;
+
+  font-family: "Roboto" sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--primary-bg);
 
   background-color: var(--primary-brand-iris);
 
@@ -926,17 +935,10 @@ body {
 
   transition: background-color var(--time-transition) var(--cub-bezier),
     box-shadow var(--time-transition) var(--cub-bezier);
+  cursor: pointer;
 }
 .send-btn:hover,
 .send-btn:focus {
   background: var(--pressed-state-ocean);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-.send-btn span {
-  font-family: "Roboto" sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  color: var(--primary-bg);
 }
