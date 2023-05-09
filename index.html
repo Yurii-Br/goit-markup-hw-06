@@ -26,7 +26,7 @@
           <a href="./index.html" class="logo-link link"
             >Web<span class="box-studio">Studio</span></a
           >
-          <!-- menu_nav -->
+          <!-- menu_nav tablet desktop -->
           <ul class="menu-nav list">
             <li class="menu-link">
               <a href="./index.html" class="link-nav link active">Studio</a>
@@ -41,7 +41,7 @@
         </nav>
         <!-- number-phone -->
         <address class="contacts">
-          <ul class="list menu-nav">
+          <ul class="list menu-nav contacts-list">
             <li>
               <a href="mailto:info@devstudio.com" class="link-cont link"
                 >info@devstudio.com</a
@@ -54,6 +54,26 @@
             </li>
           </ul>
         </address>
+        <!-- burger-btn -->
+
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
       </div>
     </header>
     <!--main_content-->
@@ -86,7 +106,7 @@
               <!-- title -->
               <h3 class="title-three desc-feature">Strategy</h3>
               <!-- description -->
-              <p class="paragraphs">
+              <p class="paragraphs featute-par">
                 Our goal is to identify the business problem to walk away with
                 the perfect and creative solution.
               </p>
@@ -102,7 +122,7 @@
               <!-- title -->
               <h3 class="title-three desc-feature">Punctuality</h3>
               <!-- description -->
-              <p class="paragraphs">
+              <p class="paragraphs featute-par">
                 Bring the key message to the brand's audience for the best price
                 within the shortest possible time.
               </p>
@@ -118,7 +138,7 @@
               <!-- title -->
               <h3 class="title-three desc-feature">Diligence</h3>
               <!-- description -->
-              <p class="paragraphs">
+              <p class="paragraphs featute-par">
                 Research and confirm brands that present the strongest digital
                 growth opportunities and minimize risk.
               </p>
@@ -134,7 +154,7 @@
               <!-- title -->
               <h3 class="title-three desc-feature">Technologies</h3>
               <!-- description -->
-              <p class="paragraphs">
+              <p class="paragraphs featute-par">
                 Design practice focused on digital experiences. We bring forth a
                 deep passion for problem-solving.
               </p>
@@ -570,7 +590,84 @@
         </button>
       </div>
     </div>
+    <!-- burger-menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="btn-modal js-close-menu">
+        <svg
+          class="close-icon"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="8"
+          height="8"
+        >
+          <use href="./images/icon.svg#icon-close"></use>
+        </svg>
+      </button>
 
+      <ul class="mobile-menu">
+        <li class="mob-li">
+          <a href="./index.html" class="link active">Studio</a>
+        </li>
+        <li class="mob-li">
+          <a href="./portfolio.html" class="link">Portfolio</a>
+        </li>
+        <li class="mob-li"><a href="" class="link">Contacts</a></li>
+      </ul>
+
+      <ul class="mob-adr">
+        <li class="mob-li-num">
+          <a href="tel:+110001111111" class="mob-link">+11 (000) 111-11-11</a>
+        </li>
+
+        <li class="mob-li-mail">
+          <a href="mailto:info@devstudio.com" class="mob-mail"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+
+      <ul class="social-list list mob-soc-list">
+        <!-- instagramm -->
+        <li class="soc-icons">
+          <a href="" class="soc-links">
+            <svg width="16" height="16" class="soc-med-img">
+              <use href="./images/icon.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <!-- twitter -->
+        <li class="soc-icons">
+          <a href="" class="soc-links">
+            <svg width="16" height="16" class="soc-med-img">
+              <use href="./images/icon.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <!-- facebook -->
+        <li class="soc-icons">
+          <a href="" class="soc-links">
+            <svg width="16" height="16" class="soc-med-img">
+              <use href="./images/icon.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <!-- linkedin -->
+        <li class="soc-icons">
+          <a href="" class="soc-links">
+            <svg width="16" height="16" class="soc-med-img">
+              <use href="./images/icon.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
