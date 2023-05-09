@@ -1239,6 +1239,7 @@ a {
 .menu-toggle {
   padding-top: 22.5px;
   padding-bottom: 22.5px;
+  margin-left: auto;
 
   min-height: 24px;
   min-width: 24px;
